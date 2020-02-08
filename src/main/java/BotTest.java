@@ -19,7 +19,7 @@ public class BotTest extends TelegramLongPollingBot {
     private final String botToken = "857820049:AAE6WQW7pRaZ3I7ViVZBgmf2T6SUZ1hl5Kg";
     private final String chatId = "-1001304932946";
 
-    private final String vkToken = "f05e872a7522184ccfd5415bcb04864a26074ad52e2684d806b29ea842d9b185942f42568aee5b480ea10";
+    public String vkToken = "f05e872a7522184ccfd5415bcb04864a26074ad52e2684d806b29ea842d9b185942f42568aee5b480ea10";
     private final String epnToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzX3Rva2VuIiwiZXhwIjoxNTgxMjY4NjIxLCJ1c2VyX2lkIjozNDUyMTgsInVzZXJfcm9sZSI6InVzZXIiLCJjbGllbnRfcGxhdGZvcm0iOiJ3ZWIiLCJjbGllbnRfaXAiOiI1LjE2LjEyNC4xOCIsImNoZWNrX2lwIjpmYWxzZSwidG9rZW4iOiI5NTUwYjgzODJjYTE4OWNjMjg0ZWVhZGU3NjgyN2E4NzZlODc1N2JmIiwic2NvcGUiOiJkZWZhdWx0In0.hmaOgLZjNmgEwVwLqSjd540o_lZEz_B_7MjhwS8tj4hg5zYd4U6kiqe8v9pwTwAnMmX_TInpC5ka2SPOYyIagg";
 
     private int status;
@@ -38,8 +38,6 @@ public class BotTest extends TelegramLongPollingBot {
     private String vkToken1 = "";
     private String epnToken1 = "";
 
-    VkTest vkTest = new VkTest();
-    EPN epn = new EPN();
 
     public void sendText(Update update, String text) {
         try {
@@ -55,8 +53,10 @@ public class BotTest extends TelegramLongPollingBot {
 
 
     public void autoSend(String group) throws IOException, URISyntaxException, InterruptedException {
+        VkTest vkTest = new VkTest();
+        EPN epn = new EPN();
 
-        vkTest.setToken(vkToken);
+//        vkTest.setToken(vkToken);
         epn.setAccess_token(epnToken);
 
         String linkConstructor = vkTest.linkConstructor(group, 1, 1);
