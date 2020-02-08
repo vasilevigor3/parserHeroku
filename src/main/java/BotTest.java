@@ -80,9 +80,9 @@ public class BotTest extends TelegramLongPollingBot {
             System.out.println(picLink + " - " + cutLinkForTG);
 
             sendPostToTG(cutLinkForTG, picLink);
-        } else {
+        } /*else {
             System.out.println("GIF");
-        }
+        }*/
     }
 
     Runnable task = () -> {
