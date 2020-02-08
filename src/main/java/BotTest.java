@@ -33,7 +33,8 @@ public class BotTest extends TelegramLongPollingBot {
 
         return groupList;
     }
-
+    VkTest vkTest = new VkTest();
+    EPN epn = new EPN();
 
     private String vkToken1 = "";
     private String epnToken1 = "";
@@ -53,8 +54,6 @@ public class BotTest extends TelegramLongPollingBot {
 
 
     public void autoSend(String group) throws IOException, URISyntaxException, InterruptedException {
-        VkTest vkTest = new VkTest();
-        EPN epn = new EPN();
 
         System.out.println(vkTest);
 
@@ -63,8 +62,11 @@ public class BotTest extends TelegramLongPollingBot {
 
         String linkConstructor = vkTest.linkConstructor(group, 1, 1);
 
+        System.out.println(linkConstructor);
+
         Thread.currentThread().sleep(1000);
         String stringResponse = vkTest.getStringResponse(linkConstructor);
+        System.out.println(stringResponse);
         Thread.currentThread().sleep(1000);
 
         String picLink = vkTest.getPicLink(stringResponse);
