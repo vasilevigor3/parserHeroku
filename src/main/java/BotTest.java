@@ -53,8 +53,8 @@ public class BotTest extends TelegramLongPollingBot {
 
     public void autoSend(String group) throws IOException, URISyntaxException, InterruptedException {
 
-        vkTest.setToken(vkToken);
-        epn.setAccess_token(epnToken);
+        vkTest.setToken("f05e872a7522184ccfd5415bcb04864a26074ad52e2684d806b29ea842d9b185942f42568aee5b480ea10");
+        epn.setAccess_token("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzX3Rva2VuIiwiZXhwIjoxNTgxMjY4NjIxLCJ1c2VyX2lkIjozNDUyMTgsInVzZXJfcm9sZSI6InVzZXIiLCJjbGllbnRfcGxhdGZvcm0iOiJ3ZWIiLCJjbGllbnRfaXAiOiI1LjE2LjEyNC4xOCIsImNoZWNrX2lwIjpmYWxzZSwidG9rZW4iOiI5NTUwYjgzODJjYTE4OWNjMjg0ZWVhZGU3NjgyN2E4NzZlODc1N2JmIiwic2NvcGUiOiJkZWZhdWx0In0.hmaOgLZjNmgEwVwLqSjd540o_lZEz_B_7MjhwS8tj4hg5zYd4U6kiqe8v9pwTwAnMmX_TInpC5ka2SPOYyIagg");
 
         String linkConstructor = vkTest.linkConstructor(group, 1, 1);
 
