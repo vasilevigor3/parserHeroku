@@ -66,6 +66,7 @@ public class BotTest extends TelegramLongPollingBot {
         Thread.currentThread().sleep(1000);
 
         String picLink = vkTest.getPicLink(stringResponse);
+        System.out.println(picLink);
         if (!picLink.equals("")) {
             String itemLink = vkTest.getItemLink(stringResponse);
             Thread.currentThread().sleep(1000);
@@ -80,9 +81,9 @@ public class BotTest extends TelegramLongPollingBot {
             System.out.println(picLink + " - " + cutLinkForTG);
 
             sendPostToTG(cutLinkForTG, picLink);
-        } /*else {
+        } else {
             System.out.println("GIF");
-        }*/
+        }
     }
 
     Runnable task = () -> {
