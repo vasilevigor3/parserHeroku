@@ -40,7 +40,7 @@ public class VkTest {
                 offset +
                 "&count=" +
                 count +
-                "&access_token=" + "f05e872a7522184ccfd5415bcb04864a26074ad52e2684d806b29ea842d9b185942f42568aee5b480ea10" + "&v=5.101";
+                "&access_token=" + token + "&v=5.101";
     }
 
 

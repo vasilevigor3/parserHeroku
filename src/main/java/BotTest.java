@@ -56,7 +56,9 @@ public class BotTest extends TelegramLongPollingBot {
         VkTest vkTest = new VkTest();
         EPN epn = new EPN();
 
-//        vkTest.setToken(vkToken);
+        System.out.println(vkTest);
+
+        vkTest.setToken(vkToken);
         epn.setAccess_token(epnToken);
 
         String linkConstructor = vkTest.linkConstructor(group, 1, 1);
