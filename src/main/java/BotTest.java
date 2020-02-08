@@ -58,12 +58,18 @@ public class BotTest extends TelegramLongPollingBot {
 
         String linkConstructor = vkTest.linkConstructor(group, 1, 1);
 
+        Thread.currentThread().sleep(1000);
         String stringResponse = vkTest.getStringResponse(linkConstructor);
+        Thread.currentThread().sleep(1000);
 
         String picLink = vkTest.getPicLink(stringResponse);
         if (!picLink.equals("")) {
             String itemLink = vkTest.getItemLink(stringResponse);
+            Thread.currentThread().sleep(1000);
+
             String linkForEpn = vkTest.getLinkForEpn(itemLink);
+            Thread.currentThread().sleep(1000);
+
             System.out.println(linkForEpn);
             String longLinkForTG = epn.getLongLinkForTG(linkForEpn);
 
